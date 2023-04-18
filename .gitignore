@@ -155,3 +155,9 @@ cython_debug/
 /company_website/settings.py
 /company_website/urls.py
 /company_website/wsgi.py
+/main_site/__init__.py
+/main_site/admin.py
+/main_site/apps.py
+/main_site/models.py
+/main_site/tests.py
+/main_site/migrations/__init__.py
