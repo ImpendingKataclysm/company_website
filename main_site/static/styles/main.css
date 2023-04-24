@@ -2,6 +2,10 @@ body {
     font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
+header {
+    display: flex;
+}
+
 .main-wrapper {
     width: 75%;
     margin: auto;
