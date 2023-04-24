@@ -11,3 +11,7 @@ def team(request):
     employees = Employee.objects.all().values()
     context = {'employees': employees}
     return render(request, "team.html", context=context)
+
+
+def about(request):
+    return render(request, "about.html")

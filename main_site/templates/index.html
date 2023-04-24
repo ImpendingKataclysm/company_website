@@ -2,15 +2,13 @@
 {% block title %}Best Company - Home{% endblock %}
 {% block content %}
     <h1>The Best Company</h1>
-    <p>
-        Lorum ipsum dolor sit amet, consesctectur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquib ex ea commodo consequat. Duis aute
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatiat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.
-    </p>
-    <div>
-        <a href="/team">Meet the Team</a>
+    <p>{% lorem %}</p>
+    <div class="grid-container">
+        <div class="grid-item">
+        <a href="/about">What We Do</a>
+        </div>
+        <div class="grid-item">
+            <a href="/team">Meet the Team</a>
+        </div>
     </div>
 {% endblock %}
