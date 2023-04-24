@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Best Company - Team{% endblock %}
 {% block content %}
     <h1>Our Team</h1>
     <div>
     {% for employee in employees %}
         <div>
-           <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
-           <p>{{ employee.role }}</p>
+           <div>
+               <img src="{% static 'images/'|add:employee.img_address %}">
+           </div>
+           <div>
+               <h3>{{ employee.first_name }} {{ employee.last_name }}</h3>
+               <p>{{ employee.role }}</p>
+           </div>
         </div>
     {% endfor %}
     </div>
