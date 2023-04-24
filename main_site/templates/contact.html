@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 {% block title %}Contact Us{% endblock %}
 {% block content %}
-    <h1>Send an Email</h1>
-    <p>We'd love to hear from you!</p>
+    <div class="email-form">
+        <h1>Send an Email</h1>
+        <p>We'd love to hear from you!</p>
+        <form method="post">
+        {% csrf_token %}
+            <div class="form-row">
+                <label for="sender_name">Your name</label>
+                <br>
+                <input type="text" id="sender_name" name="sender_name" required>
+            </div>
+            <div class="form-row">
+                <label for="sender_email">Your email address</label>
+                <br>
+                <input type="text" id="sender_email" name="sender_email" required>
+            </div>
+            <div class="form-row">
+                <label for="message">What would you like to say? </label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 {% endblock %}
