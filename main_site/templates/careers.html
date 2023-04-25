@@ -4,7 +4,7 @@
 {% block content %}
     <h2>Join Our Team</h2>
     <p>Start your application today:</p>
-    <div class="input-form">
+    <div class="input-form card">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-row">
@@ -27,23 +27,31 @@
                 <label for="employment_status">Current Employment Status: </label>
                 <br>
                 <div id="employment_status">
-                    <input type="radio" id="employed" value="employed" name="employment_status" required>
-                    <label for="employed">Employed</label>
-                    <input type="radio" id="unemployed" value="unemployed" name="employment_status" required>
-                    <label for="unemployed">Unemployed</label>
-                    <input type="radio" id="self-employed" value="self-employed" name="employment_status" required>
-                    <label for="self-employed">Self-Employed</label>
-                    <input type="radio" id="student" value="student" name="employment_status" required>
-                    <label for="student">Student</label>
+                    <div>
+                        <input type="radio" id="employed" value="employed" name="employment_status" required>
+                        <label for="employed">Employed</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="unemployed" value="unemployed" name="employment_status" required>
+                        <label for="unemployed">Unemployed</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="self-employed" value="self-employed" name="employment_status" required>
+                        <label for="self-employed">Self-Employed</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="student" value="student" name="employment_status" required>
+                        <label for="student">Student</label>
+                    </div>
                 </div>
-                <div class="form-row">
-                    <label for="resume">Upload your resume: </label>
-                    <input type="file" id="resume" name="resume">
-                </div>
+            </div>
+            <div class="form-row">
+                <label for="resume">Upload your resume: </label>
+                <input type="file" id="resume" name="resume">
             </div>
             <button type="submit">Send Application</button>
             {% if messages %}
-                <div>
+                <div class="success-message">
                 {% for message in messages %}
                     {{ message }}
                 {% endfor %}
