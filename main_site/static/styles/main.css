@@ -136,7 +136,9 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: lightblue;
+    background-image: linear-gradient(to bottom, #0d1e60, #234674);
+    margin: 0.5rem;
+    padding: 0.2rem;
 }
 
 .form-row {
@@ -158,4 +160,9 @@ header img {
     color: #bbc3fb;
     padding: 0.7rem 0.9rem;
     border: none;
+}
+
+/* Success message for email/job application submission */
+.success-message {
+    padding: 0.5rem;
 }

@@ -46,7 +46,7 @@ def contact(request):
             # email_message.send()
 
             # Display a success message in the browser
-            success_message = f"Thanks for reaching out, {sender_name.title()}"
+            success_message = f"Thanks for reaching out, {sender_name.title()}!"
             messages.success(request, success_message)
 
     return render(request, "contact.html")
