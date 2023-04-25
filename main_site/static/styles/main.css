@@ -61,12 +61,62 @@ header img {
 }
 
 .grid-item {
-    border: 1px solid green;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .flex-container {
     display: flex;
     gap: 0.9rem;
+}
+
+/* Home page links */
+.main-link:link, .main-link:visited {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    height: 10rem;
+    color: #212a8e;
+    font-weight: bold;
+    line-height: 10;
+}
+
+.main-link:hover, .main-link:active {
+    color: #054f99;
+}
+
+#about-link, #team-link, #contact-link, #join-link {
+    position: relative;
+}
+
+#about-link:before, #team-link:before, #contact-link:before, #join-link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+#about-link:before {
+    background-image: url("../images/home-about.jpg");
+}
+
+#team-link:before {
+    background-image: url("../images/home-team.jpg");
+}
+
+#contact-link:before {
+    background-image: url("../images/home-contact.jpg");
+}
+
+#join-link:before {
+    background-image: url("../images/home-join.jpg");
 }
 
 /* Contact page email form */

@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block title %}Best Company - Home{% endblock %}
 {% block content %}
-    <h2>The Best Company</h1>
+    <h2>The Best Company</h2>
     <p>{% lorem %}</p>
     <div class="grid-container">
-        <div class="grid-item">
-        <a href="/about">What We Do</a>
+        <div class="grid-item" id="about-link">
+            <a href="/about" class="main-link" >What We Do</a>
         </div>
-        <div class="grid-item">
-            <a href="/team">Meet the Team</a>
+        <div class="grid-item" id="team-link">
+            <a href="/team" class="main-link">Who We Are</a>
         </div>
-        <div class="grid-item">
-            <a href="/contact">Contact Us</a>
+        <div class="grid-item" id="contact-link">
+            <a href="/contact" class="main-link">Contact Us</a>
         </div>
-        <div class="grid-item">
-            <a href="/careers">Join Our Team</a>
+        <div class="grid-item" id="join-link">
+            <a href="/careers" class="main-link">Join Our Team</a>
         </div>
     </div>
 {% endblock %}
