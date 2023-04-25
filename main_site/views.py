@@ -80,9 +80,7 @@ def careers(request):
                                      employment_status=employment_status)
 
             # Display a success message in the browser
-            # success_message = f"Thanks for reaching out, {sender_name.title()}"
-            # messages.success(request, success_message)
-        else:
-            print(form.errors)
+            success_message = f"Thanks for your application, {first_name.title()} {last_name.title()}"
+            messages.success(request, success_message)
 
     return render(request, "careers.html")

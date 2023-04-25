@@ -43,9 +43,11 @@
             </div>
             <button type="submit">Send Application</button>
             {% if messages %}
-                {% for message in message %}
-                    <p>{{ message }}</p>
+                <div>
+                {% for message in messages %}
+                    {{ message }}
                 {% endfor %}
+                </div>
             {% endif %}
         </form>
     </div>
