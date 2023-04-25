@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from datetime import datetime
 from django.core.mail.message import EmailMessage
 from django.conf import settings
+from django.contrib import messages
 
 from .models import Employee, Email
 from .forms import SendEmailForm
@@ -37,5 +37,9 @@ def contact(request):
                                          body=message,
                                          to=[settings.EMAIL_HOST_USER])
             # email_message.send()
+
+            # Display a success message in the browser
+            success_message = f"Thanks for reaching out, {sender_name.title()}"
+            messages.success(request, success_message)
 
     return render(request, "contact.html")
