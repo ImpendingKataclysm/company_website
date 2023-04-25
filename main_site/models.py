@@ -21,3 +21,15 @@ class Email(models.Model):
 
     def __str__(self):
         return f"From {self.sender_name} ({self.sender_email}) on {self.date_sent}: {self.message}"
+
+
+class Applicant(models.Model):
+    first_name = models.CharField(max_length=MAX_FIELD_LEN)
+    last_name = models.CharField(max_length=MAX_FIELD_LEN)
+    email = models.EmailField(null=True)
+    date_applied = models.DateTimeField()
+    date_available = models.DateTimeField()
+    employment_status = models.CharField(max_length=MAX_FIELD_LEN)
+
+    def __str__(self):
+        return f"{self.last_name}, {self.first_name}"

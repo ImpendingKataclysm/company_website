@@ -4,7 +4,7 @@ from django.conf import settings
 from django.contrib import messages
 from datetime import datetime
 
-from .models import Employee, Email
+from .models import Employee, Email, Applicant
 from .forms import SendEmailForm, ApplicationForm
 
 
@@ -57,10 +57,31 @@ def careers(request):
         form = ApplicationForm(request.POST, request.FILES)
 
         if form.is_valid():
+            # Get the applicant's information
+            first_name = form.cleaned_data["first_name"]
+            last_name = form.cleaned_data["last_name"]
+            email = form.cleaned_data["email"]
+            date_applied = datetime.now()
+            date_available = form.cleaned_data["start_date"]
+            employment_status = form.cleaned_data["employment_status"]
+
+            # Save the applicant's resume in the 'resume' folder
             f = request.FILES['resume']
-            with open(f'main_site/static/resumes/{f.name}', 'wb+') as dest:
+            with open(f'main_site/static/resumes/{last_name}_{first_name}_{f.name}', 'wb+') as dest:
                 for chunk in f.chunks():
                     dest.write(chunk)
+
+            # Save the applicant in the database
+            Applicant.objects.create(first_name=first_name,
+                                     last_name=last_name,
+                                     email=email,
+                                     date_applied=date_applied,
+                                     date_available=date_available,
+                                     employment_status=employment_status)
+
+            # Display a success message in the browser
+            # success_message = f"Thanks for reaching out, {sender_name.title()}"
+            # messages.success(request, success_message)
         else:
             print(form.errors)
 
