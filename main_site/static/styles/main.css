@@ -1,5 +1,10 @@
 body {
     font-family: "Arial Rounded MT Bold", sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #81d4fa, #b8e4f9);
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #1b1b1b;
 }
 
 nav {
@@ -28,8 +33,20 @@ nav li a:hover, nav li a:active {
 }
 
 header {
-    padding-top: 5rem;
+    padding: 5rem 0 2rem 2rem;
+    margin: 0;
     display: flex;
+    gap: 0.7rem;
+    background-image: linear-gradient(to bottom, #560303, #b20814);
+    color: white;
+}
+
+header p {
+    font-style: italic;
+}
+
+header img {
+    border-radius: 0.5rem;
 }
 
 .main-wrapper {
