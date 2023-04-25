@@ -1,10 +1,14 @@
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: "Arial Rounded MT Bold", sans-serif;
     margin: 0;
     background-image: linear-gradient(to bottom, #81d4fa, #b8e4f9);
     background-repeat: no-repeat;
-    height: 100%;
     color: #1b1b1b;
+    height: 100%;
+
 }
 
 nav {
@@ -52,6 +56,11 @@ header img {
 .main-wrapper {
     width: 75%;
     margin: auto;
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 .grid-container {
@@ -165,4 +174,43 @@ header img {
 /* Success message for email/job application submission */
 .success-message {
     padding: 0.5rem;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .input-form {
+        width: 100%;
+        margin: auto;
+    }
+
+    .input-form form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-container {
+        display: block;
+    }
 }
