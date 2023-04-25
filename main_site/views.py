@@ -1,10 +1,13 @@
+import os.path
+
 from django.shortcuts import render
 from django.core.mail.message import EmailMessage
 from django.conf import settings
 from django.contrib import messages
+from django.core.files.storage import FileSystemStorage
 
 from .models import Employee, Email
-from .forms import SendEmailForm
+from .forms import SendEmailForm, ApplicationForm
 
 
 def home(request):
@@ -46,4 +49,15 @@ def contact(request):
 
 
 def careers(request):
+    if request.method == 'POST':
+        form = ApplicationForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            f = request.FILES['resume']
+            with open(f'main_site/static/resumes/{f.name}', 'wb+') as dest:
+                for chunk in f.chunks():
+                    dest.write(chunk)
+        else:
+            print(form.errors)
+
     return render(request, "careers.html")
