@@ -119,6 +119,18 @@ header img {
     background-image: url("../images/home-join.jpg");
 }
 
+/* Team page */
+.card {
+    background-image: linear-gradient(to bottom, #0d1c5d, #2836b1);
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem #1b1b1b;
+}
+
+.card img {
+    border-radius: 0.5rem;
+}
+
 /* Contact page email form */
 .input-form {
     display: flex;
