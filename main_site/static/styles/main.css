@@ -2,7 +2,33 @@ body {
     font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #2a4d67, #4f77a9);
+    width: 100%;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav li a:link, nav li a:visited {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: white;
+}
+
+nav li a:hover, nav li a:active {
+    color: #858dcd;
+}
+
 header {
+    padding-top: 5rem;
     display: flex;
 }
 
@@ -18,7 +44,7 @@ header {
 }
 
 .grid-item {
-    border: 1px solid red;
+    border: 1px solid green;
 }
 
 /* Contact page email form */

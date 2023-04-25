@@ -166,3 +166,4 @@ cython_debug/
 /main_site/migrations/0003_resume.py
 /main_site/migrations/0004_applicant_delete_resume.py
 /main_site/migrations/0005_applicant_email.py
+/productionfiles/

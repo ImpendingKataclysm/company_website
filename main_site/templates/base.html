@@ -8,17 +8,19 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/careers">Careers</a></li>
+        </ul>
+    </nav>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/team">Our Team</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/careers">Careers</a></li>
-            </ul>
-        </nav>
-        <div><img src="{% static 'images/logo.jpg' %}" alt="Company logo"></div>
+        <div>
+            <img src="{% static 'images/logo.jpg' %}" alt="Company logo">
+        </div>
         <h1>Best Company</h1>
     </header>
     <div class="main-wrapper">
