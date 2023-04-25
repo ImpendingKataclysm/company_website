@@ -163,3 +163,4 @@ cython_debug/
 /main_site/migrations/0001_initial.py
 /main_site/migrations/0002_email.py
 /main_site/static/resumes/
+/main_site/migrations/0003_resume.py

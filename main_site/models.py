@@ -21,9 +21,3 @@ class Email(models.Model):
 
     def __str__(self):
         return f"From {self.sender_name} ({self.sender_email}) on {self.date_sent}: {self.message}"
-
-
-class Resume(models.Model):
-    description = models.CharField(max_length=255, blank=True)
-    file = models.FileField(upload_to='documents/')
-    uploaded_at = models.DateTimeField(auto_now_add=True)

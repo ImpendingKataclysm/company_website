@@ -1,8 +1,6 @@
 from django import forms
 from datetime import datetime
 
-from .models import Resume
-
 
 class SendEmailForm(forms.Form):
     """

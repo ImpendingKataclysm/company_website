@@ -1,10 +1,8 @@
-import os.path
-
 from django.shortcuts import render
 from django.core.mail.message import EmailMessage
 from django.conf import settings
 from django.contrib import messages
-from django.core.files.storage import FileSystemStorage
+from datetime import datetime
 
 from .models import Employee, Email
 from .forms import SendEmailForm, ApplicationForm
@@ -32,6 +30,12 @@ def contact(request):
             sender_name = form.cleaned_data["sender_name"]
             sender_email = form.cleaned_data["sender_email"]
             message = form.cleaned_data["message"]
+
+            # Store the message in a database
+            Email.objects.create(sender_name=sender_name,
+                                 sender_email=sender_email,
+                                 date_sent=datetime.now(),
+                                 message=message)
 
             # Email sending functionality not implemented at this time
             # No app password configured
