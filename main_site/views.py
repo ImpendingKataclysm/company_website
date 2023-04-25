@@ -43,3 +43,7 @@ def contact(request):
             messages.success(request, success_message)
 
     return render(request, "contact.html")
+
+
+def careers(request):
+    return render(request, "careers.html")
