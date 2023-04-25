@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-image: linear-gradient(to bottom, #81d4fa, #b8e4f9);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     color: #1b1b1b;
 }
 
@@ -62,6 +62,11 @@ header img {
 
 .grid-item {
     border: 1px solid green;
+}
+
+.flex-container {
+    display: flex;
+    gap: 0.9rem;
 }
 
 /* Contact page email form */

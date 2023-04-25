@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}About{% endblock %}
 {% block content %}
-    <h2>About us</h2>
-    <p>{% lorem %}</p>
+    <h2>Our Mission</h2>
+    <div class="flex-container">
+        <div>
+            <img src="{% static 'images/about1.jpg' %}" alt="a team collaborating on a project">
+        </div>
+        <div>
+            <p>{% lorem %}</p>
+        </div>
+    </div>
+    <h2>Our History</h2>
+    <div class="flex-container">
+        <div>
+            <p>{% lorem %}</p>
+        </div>
+        <div>
+            <img src="{% static 'images/about2.jpg' %}">
+        </div>
+    </div>
 {% endblock %}
