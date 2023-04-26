@@ -6,6 +6,7 @@ from datetime import datetime
 
 from .models import Employee, Email, Applicant
 from .forms import SendEmailForm, ApplicationForm
+from .functions import handle_validation_error
 
 
 def home(request):
@@ -48,6 +49,8 @@ def contact(request):
             # Display a success message in the browser
             success_message = f"Thanks for reaching out, {sender_name.title()}!"
             messages.success(request, success_message)
+        else:
+            handle_validation_error(request)
 
     return render(request, "contact.html")
 
@@ -82,5 +85,7 @@ def careers(request):
             # Display a success message in the browser
             success_message = f"Thanks for your application, {first_name.title()} {last_name.title()}"
             messages.success(request, success_message)
+        else:
+            handle_validation_error(request)
 
     return render(request, "careers.html")
