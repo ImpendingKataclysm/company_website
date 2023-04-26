@@ -18,6 +18,7 @@ nav {
     background-image: linear-gradient(to bottom, #2a4d67, #4f77a9);
     width: 100%;
     padding: 0;
+    z-index: 1;
 }
 
 nav ul {
@@ -177,9 +178,13 @@ footer {
 }
 
 /* Responsive layout */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .flex-container {
+        flex-direction: column;
     }
 }
 
@@ -214,3 +219,5 @@ footer {
         display: block;
     }
 }
+
+
