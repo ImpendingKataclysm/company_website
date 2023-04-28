@@ -6,7 +6,7 @@ from datetime import datetime
 
 from .models import Employee, Email, Applicant
 from .forms import SendEmailForm, ApplicationForm
-from .functions import handle_validation_error
+from .functions import handle_validation_error, ERROR_MESSAGE
 
 
 def home(request):

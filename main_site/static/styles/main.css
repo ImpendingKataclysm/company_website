@@ -178,8 +178,8 @@ nav li a:hover, nav li a:active {
 
 /* Success and error messages for form submission */
 .response_message {
-    width: 10rem;
-    height: 8rem;
+    width: 20%;
+    height: 15%;
     padding: 0.8rem;
     text-align: center;
     position: fixed;
@@ -187,26 +187,40 @@ nav li a:hover, nav li a:active {
     left: 40%;
 }
 
-.response_message p {
+ul.messages {
+    list-style-type: none;
+}
+
+.response_message li {
     line-height: 1.5;
+    padding: 0.7rem;
 }
 
 .response-btn {
+    display: block;
     cursor: pointer;
-    background: #4f4f4f;
+    background: #447674;
     padding: 0.4rem;
-    width: 30%;
-    margin: auto;
+    width: 40%;
+    margin: 0.5rem auto;
     border-radius: 0.5rem;
 }
 
-.response-btn a:link, .response-btn a:visited {
+.response-btn:link, .response-btn:visited {
     color: white;
     text-decoration: none;
 }
 
-.response-btn a:hover, .response-btn a:active {
+.response-btn:hover, .response-btn:active {
     color: #5c82e7;
+}
+
+.error {
+    background-image: linear-gradient(to bottom, #bb0303, #f72828);
+}
+
+.success {
+    background-image: linear-gradient(to bottom, #034d03, #189418);
 }
 
 /* Responsive layouts */
