@@ -10,7 +10,7 @@ class Employee(models.Model):
     img_address = models.CharField(max_length=MAX_FIELD_LEN)
 
     def __str__(self):
-        return f"{self.last_name}, {self.first_name}"
+        return f"{self.last_name}, {self.first_name}: {self.role}"
 
 
 class Email(models.Model):
