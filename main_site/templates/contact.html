@@ -22,10 +22,13 @@
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
             {% if messages %}
-                <div class="success-message">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
+                <div class="card response_message">
+                    <p>
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </p>
+                    <div class="response-btn"><a href="/">Home</a></div>
                 </div>
             {% endif %}
         </form>
