@@ -178,13 +178,13 @@ nav li a:hover, nav li a:active {
 
 /* Success and error messages for form submission */
 .response_message {
-    width: 20%;
+    width: 30%;
     height: 15%;
     padding: 0.8rem;
     text-align: center;
     position: fixed;
-    top:40%;
-    left: 40%;
+    top:30%;
+    left: 30%;
 }
 
 ul.messages {
@@ -225,16 +225,20 @@ ul.messages {
 
 /* Responsive layouts */
 @media screen and (max-width: 1000px) {
+    header img {
+        width: 150px
+    }
+
     .grid-container {
         grid-template-columns: 1fr 1fr;
     }
 
-    .flex-container {
-        flex-direction: column;
+    img {
+        width: 300px;
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 720px) {
     body {
         font-size: 0.7rem;
     }
@@ -258,11 +262,32 @@ ul.messages {
     }
 
     .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    nav .flex-container {
+        flex-direction: row;
+        padding: 0;
+        gap: 0.2rem;
+    }
+
+    .grid-container {
         grid-template-columns: 1fr;
     }
 
-    .flex-container {
-        display: block;
+    .response_message {
+        width: 50%;
+        left: 20%
+    }
+
+    input#resume {
+        font-size: 0.7rem;
     }
 }
 
