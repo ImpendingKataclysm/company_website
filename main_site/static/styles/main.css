@@ -1,4 +1,4 @@
-
+/* General layouts, fonts and colors for all pages */
 body {
     display: flex;
     flex-direction: column;
@@ -8,40 +8,10 @@ body {
     background-repeat: no-repeat;
     color: #1b1b1b;
     height: 100%;
-
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, #2a4d67, #4f77a9);
-    width: 100%;
-    padding: 0;
-    z-index: 1;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 0.5rem;
-}
-
-nav li a:link, nav li a:visited {
-    text-decoration: none;
-    padding: 0.5rem;
-    color: white;
-}
-
-nav li a:hover, nav li a:active {
-    color: #858dcd;
 }
 
 header {
     padding: 5rem 0 2rem 2rem;
-    margin: 0;
-    display: flex;
-    gap: 0.7rem;
     background-image: linear-gradient(to bottom, #560303, #b20814);
     color: white;
 }
@@ -54,16 +24,17 @@ header img {
     border-radius: 0.5rem;
 }
 
+footer {
+    flex-shrink: 0;
+}
+
 .main-wrapper {
     width: 75%;
     margin: auto;
     flex: 1 0 auto;
 }
 
-footer {
-    flex-shrink: 0;
-}
-
+/* Grid layout */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -75,9 +46,35 @@ footer {
     margin: 0.5rem;
 }
 
+/* Flex layout */
 .flex-container {
     display: flex;
     gap: 0.9rem;
+}
+
+/* Navigation Menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #2a4d67, #4f77a9);
+    width: 100%;
+    padding: 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li a:link, nav li a:visited {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: white;
+}
+
+nav li a:hover, nav li a:active {
+    color: #858dcd;
 }
 
 /* Home page links */
@@ -100,7 +97,11 @@ footer {
     position: relative;
 }
 
-#about-link:before, #team-link:before, #contact-link:before, #join-link:before {
+/* Transparent background images for links */
+#about-link:before,
+#team-link:before,
+#contact-link:before,
+#join-link:before {
     content: '';
     display: block;
     position: absolute;
@@ -129,7 +130,7 @@ footer {
     background-image: url("../images/home-join.jpg");
 }
 
-/* Team page */
+/* Standout page elements such as employee profiles and forms */
 .card {
     background-image: linear-gradient(to bottom, #0d1c5d, #2836b1);
     color: white;
@@ -141,12 +142,11 @@ footer {
     border-radius: 0.5rem;
 }
 
-/* Contact page email form */
+/* Form elements */
 .input-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(to bottom, #0d1e60, #234674);
     margin: 0.5rem;
     padding: 0.2rem;
 }
@@ -163,7 +163,11 @@ footer {
     min-height: 5rem;
 }
 
-.email-btn {
+#employment_status div {
+    padding: 0.6rem;
+}
+
+.submit-btn {
     font-size: 1.1rem;
     cursor: pointer;
     background: #13132b;
@@ -177,7 +181,7 @@ footer {
     padding: 0.5rem;
 }
 
-/* Responsive layout */
+/* Responsive layouts */
 @media screen and (max-width: 1000px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;

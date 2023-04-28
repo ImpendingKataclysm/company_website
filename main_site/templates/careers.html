@@ -4,8 +4,8 @@
 {% block content %}
     <h2>Join Our Team</h2>
     <p>Start your application today:</p>
-    <div class="input-form card">
-        <form method="post" enctype="multipart/form-data">
+    <div class="card">
+        <form method="post" enctype="multipart/form-data" class="input-form">
             {% csrf_token %}
             <div class="form-row">
                 <label for="first_name">First Name: </label>
@@ -49,7 +49,7 @@
                 <label for="resume">Upload your resume: </label>
                 <input type="file" id="resume" name="resume">
             </div>
-            <button type="submit">Send Application</button>
+            <button type="submit" class="submit-btn">Send Application</button>
             {% if messages %}
                 <div class="success-message">
                 {% for message in messages %}

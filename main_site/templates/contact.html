@@ -4,7 +4,7 @@
     <div class="input-form card">
         <h2>Send an Email</h2>
         <p>We'd love to hear from you!</p>
-        <form method="post">
+        <form method="post" class="input-form">
         {% csrf_token %}
             <div class="form-row">
                 <label for="sender_name">Your name</label>
@@ -20,7 +20,7 @@
                 <label for="message">What would you like to say? </label>
                 <textarea id="message" name="message"></textarea>
             </div>
-            <button type="submit">Send</button>
+            <button type="submit" class="submit-btn">Send Message</button>
             {% if messages %}
                 <div class="success-message">
                 {% for message in messages %}
