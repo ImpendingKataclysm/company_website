@@ -10,20 +10,34 @@ from .functions import handle_validation_error, ERROR_MESSAGE
 
 
 def home(request):
+    """
+    Renders the home page in the browser
+    """
     return render(request, "index.html")
 
 
 def team(request):
+    """
+    Pulls employee information from the database and renders it in the 'team'
+    page
+    """
     employees = Employee.objects.all().values()
     context = {'employees': employees}
     return render(request, "team.html", context=context)
 
 
 def about(request):
+    """
+    Renders the 'about' page in the browser
+    """
     return render(request, "about.html")
 
 
 def contact(request):
+    """
+    Renders the 'contact' page and collects user information from the contact
+    form
+    """
     if request.method == 'POST':
         form = SendEmailForm(request.POST)
 
@@ -56,6 +70,10 @@ def contact(request):
 
 
 def careers(request):
+    """
+    Renders the 'careers' page and collects job applicant information, including
+    their resume
+    """
     if request.method == 'POST':
         form = ApplicationForm(request.POST, request.FILES)
 

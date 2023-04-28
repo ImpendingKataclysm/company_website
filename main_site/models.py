@@ -4,6 +4,10 @@ MAX_FIELD_LEN = 80
 
 
 class Employee(models.Model):
+    """
+    Database table for company employees whose profiles are displayed on the
+    website.
+    """
     first_name = models.CharField(max_length=MAX_FIELD_LEN)
     last_name = models.CharField(max_length=MAX_FIELD_LEN)
     role = models.CharField(max_length=MAX_FIELD_LEN)
@@ -14,6 +18,9 @@ class Employee(models.Model):
 
 
 class Email(models.Model):
+    """
+    Database table for emails received from the public
+    """
     sender_name = models.CharField(max_length=MAX_FIELD_LEN)
     sender_email = models.EmailField()
     date_sent = models.DateTimeField()
@@ -24,6 +31,9 @@ class Email(models.Model):
 
 
 class Applicant(models.Model):
+    """
+    Database table for job applicants
+    """
     first_name = models.CharField(max_length=MAX_FIELD_LEN)
     last_name = models.CharField(max_length=MAX_FIELD_LEN)
     email = models.EmailField(null=True)
